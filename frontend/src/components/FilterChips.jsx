@@ -1,0 +1,1 @@
+export default function FilterChips({ categories, selected, onSelect }) { return <div className="chips">{categories.map(category => <button key={category} className={`chip ${selected === category ? 'selected' : ''}`} onClick={() => onSelect(category)}>{category === 'All' && <span className="chip-star">✳</span>}{category}</button>)}</div>; }

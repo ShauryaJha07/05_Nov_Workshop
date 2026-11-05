@@ -1,0 +1,1 @@
+export default function StatusBadge({ status='confirmed' }) { const local = status === 'demo'; return <span className={`status-badge ${local?'local':''}`}><i></i>{local?'Saved on device':'Confirmed'}</span>; }

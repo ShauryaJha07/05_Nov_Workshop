@@ -1,0 +1,1 @@
+export default function Alert({ kind='info', children, action, onAction }) { return <div className={`inline-notice alert-${kind}`}><span>{kind==='success'?'✓':kind==='error'?'!':'i'}</span>{children}{action&&<button onClick={onAction}>{action}</button>}</div>; }

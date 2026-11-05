@@ -1,0 +1,2 @@
+import Icon from './Icon';
+export default function RegisterButton({ event, registered, busy, onRegister }) { const disabled = busy || event.seats === 0 || registered; return <button disabled={disabled} className={`register-button ${registered?'registered':''}`} onClick={() => onRegister(event)}>{busy?<><span className="spinner"/> Saving your spot…</>:registered?<><Icon name="check"/> You’re registered</>:event.seats===0?'Event is full':<>Register for this event <Icon name="arrow" size={17}/></>}</button>; }
